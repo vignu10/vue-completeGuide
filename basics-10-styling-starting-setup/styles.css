@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Jost', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+
+
+
+.demo {
+  position: relative;
+  background: #000;
+ width: 10rem;
+  height: 10rem;
+  margin: 16px;
+  animation-name: posi;
+}
+
+.animation{
+  
+  animation-name: movement;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes posi {
+  0%{
+    margin-left: 0%;
+  }
+  25%{
+    margin-left: 100%;
+  }
+  50%{
+    margin-top: 100%;
+  }
+  75%{
+    margin-right: 100%;
+  }
+  100%{
+    margin-bottom: 100%;
+  }
+
+  
+}
+@keyframes movement {
+  0%{background-color: red;}
+  25%{
+    left: 50;
+    background-color: green;}
+  50%{
+    top: 50;
+    background-color: blue;}
+  75%{
+    right: 50;
+    background-color: violet;
+  }
+  100%{
+    bottom: 50;
+    background-color: red;}
+}
+
