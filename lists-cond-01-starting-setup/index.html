@@ -18,12 +18,21 @@
     </header>
     <section id="user-goals">
       <h2>My course goals</h2>
-      <input type="text" />
-      <button>Add Goal</button>
-      <p>No goals have been added yet - please start adding some!</p>
+      <input type="text" v-model="enteredGoalValue"/>
+      <button @click="addGoal">Add Goal</button>
+      <p v-if="goals.length===0">No goals have been added yet - please start adding some!</p>
       <ul>
-        <li>Goal</li>
+        <li v-for="(goal, index) in goals" @click="removeGoal(index)">{{ goal }}</li>
+
+     <!-- used for iterate between numbers
+         <li v-for="nums in 10">{{nums}}</li>    -->
+
+        <!-- used for iterate between objects
+        <li v-for="{name : vignu , age: 20}"></li> -->
+
+
       </ul>
     </section>
   </body>
 </html>
+
